@@ -1,0 +1,19 @@
+//  All your css style sheets should be modularized
+//    and imported into this file with the @import protocol.
+//    all files imported should begin with an underscore _
+
+// Compass framework
+@import 'compass/css3';
+@import 'compass/utilities/general';
+@import 'compass/typography/text/ellipsis';
+
+// All your variables
+@import 'variables';
+
+// Bootstrap
+@import 'vendor/bootstrap-variables';
+@import 'vendor/bootstrap-custom';
+// @import 'bootstrap-responsive';  /*Part of the bootstrap gem*/ // not working
+
+// Partials
+@import 'partials/layout';
