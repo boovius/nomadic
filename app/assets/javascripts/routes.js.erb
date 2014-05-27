@@ -1,12 +1,11 @@
-Caravel.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
+Nomadic.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
 //= depend_on_asset 'home/home.html'
 
   $locationProvider.html5Mode(true)
 
   $routeProvider
   .when('/', {
-    templateUrl: '<%= asset_path('home/home.html') %>',
-    controller: 'HomeController'
+    templateUrl: '<%= asset_path('home/home.html') %>'
   })
   .otherwise({
     resolve: {

@@ -17,6 +17,9 @@
             %ul.dropdown-menu
               %li
                 %a(href="/widgets/new")Create Story!
+          - else
+            %a.dropdown-toggle(href="#" data-toggle="dropdown")
+              Log In!
     = yield
     #footer
     = javascript_include_tag "application"

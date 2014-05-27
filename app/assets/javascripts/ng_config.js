@@ -1,12 +1,14 @@
+//= require angular
+//= require angular-resource
+//= require angular-route
 //= require_self
 //= require_tree ./directives
 //= require_tree ./controllers
 //= require_tree ./services
 
-Caravel = angular.module('Caravel', [
+Nomadic = angular.module('Nomadic', [
   'ngRoute',
-  'ngResource',
-  'ui.bootstrap'
+  'ngResource'
 ])
 
 .config(['$httpProvider', '$routeProvider', '$locationProvider', function($httpProvider, $routeProvider, $locationProvider) {

@@ -12,5 +12,5 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require config
+//= require ng_config
 //= require_tree .
