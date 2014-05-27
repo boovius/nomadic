@@ -1,0 +1,24 @@
+%html
+  %head
+    %title
+      Nomadic
+    = include_gon
+    = csrf_meta_tags
+    = stylesheet_link_tag "application"
+  %body(ng-app="Nomadic")
+    %nav.nav.navbar.navbar-inverse.navbar-fixed-top
+      %a.navbar-brand(href="/")
+        Nomadic
+      %ul.nav.navbar-nav.navbar-right
+        %li.dropdown
+          -if current_user.present?
+            %a.dropdown-toggle(href="#" data-toggle="dropdown")
+              #{current_user.name}'s profile
+            %ul.dropdown-menu
+              %li
+                %a(href="/widgets/new")Create Story!
+    = yield
+    #footer
+    = javascript_include_tag "application"
+
+
