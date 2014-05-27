@@ -1,0 +1,18 @@
+Caravel.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
+//= depend_on_asset 'home/home.html'
+
+  $locationProvider.html5Mode(true)
+
+  $routeProvider
+  .when('/', {
+    templateUrl: '<%= asset_path('home/home.html') %>',
+    controller: 'HomeController'
+  })
+  .otherwise({
+    resolve: {
+      login: ['Auth', '$window', function(Auth, $window) {
+        $window.location.href = '/'
+      }]
+    }
+  })
+}])
