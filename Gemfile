@@ -7,6 +7,7 @@ gem 'rails', '4.1.1'
 # API
 gem 'pg'
 gem 'jbuilder', '~> 2.0'
+gem 'gon'
 gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'haml-rails'
 
