@@ -22,9 +22,9 @@ window.fbAsyncInit = function() {
     FB.login(function(response) {
       hello = response;
       console.log(hello);
-      // if (response.authResponse) {
-      //   window.location = '/auth/facebook/callback';
-      // }
+      if (response.authResponse) {
+        window.location = '/auth/facebook/callback';
+      }
     });
   });
 
