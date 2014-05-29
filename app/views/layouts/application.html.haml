@@ -18,7 +18,7 @@
               %li
                 %a(href="/widgets/new")Create Story!
           - else
-            %a.dropdown-toggle(href="#" data-toggle="dropdown")
+            %a#sign-in.dropdown-toggle(href="/auth/facebook" data-toggle="dropdown")
               Log In!
     = yield
     #footer
