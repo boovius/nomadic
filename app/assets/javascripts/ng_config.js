@@ -2,6 +2,7 @@
 //= require angular-resource
 //= require angular-route
 //= require_self
+//= require_tree ./controllers
 
 Nomadic = angular.module('Nomadic', [
   'ngRoute',

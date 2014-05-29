@@ -17,7 +17,8 @@ class ApplicationController < ActionController::Base
 
   def expose_config_to_javascript
     config = {
-      appUrl: APP_CONFIG[:app_url]
+      appUrl: APP_CONFIG[:app_url],
+      facebookAppId: ENV['FB_APP_ID']
     }
     gon.config = config
   end

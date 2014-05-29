@@ -7,6 +7,7 @@ gem 'rails', '4.1.1'
 # Login
 gem 'omniauth'
 gem 'omniauth-facebook', '1.4.0'
+gem 'dotenv-rails'
 
 # API
 gem 'pg'

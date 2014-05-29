@@ -6,7 +6,7 @@
     = csrf_meta_tags
     = stylesheet_link_tag "application"
   %body(ng-app="Nomadic")
-    %nav.nav.navbar.navbar-inverse.navbar-fixed-top
+    %nav.nav.navbar.navbar-inverse.navbar-fixed-top(ng-controller="NavController")
       %a.navbar-brand(href="/")
         Nomadic
       %ul.nav.navbar-nav.navbar-right
