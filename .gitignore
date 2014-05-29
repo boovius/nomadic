@@ -17,3 +17,4 @@
 
 # Ignore vendor bundle
 /vendor/bundle
+.env
