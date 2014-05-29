@@ -4,6 +4,10 @@ ruby '2.1.1'
 
 gem 'rails', '4.1.1'
 
+# Login
+gem 'omniauth'
+gem 'omniauth-facebook', '1.4.0'
+
 # API
 gem 'pg'
 gem 'jbuilder', '~> 2.0'
