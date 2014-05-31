@@ -1,8 +1,8 @@
 Nomadic.controller('EditProfileController', ['$scope', '$location', 'UserService', function($scope, $location, UserService) {
-  console.log('hello')
-
+  $scope.user = {}
+  $scope.user.id = gon.currentUser.id
   // if user has filled in work/home zips but not profession
-  $scope.completeProfile = function(){
-    UserService.user.update(angular.snakeize($scope.user))
+  $scope.editProfile = function(){
+    UserService.user.update(angular.snakeize($scope.user), {id: $scope.user.id})
   }
 }])

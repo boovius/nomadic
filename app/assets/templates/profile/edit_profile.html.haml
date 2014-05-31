@@ -1,7 +1,7 @@
 #edit_profile.container(ng-controller="EditProfileController")
   .col-md-offset-3
     %h3 Complete that profile, fool!
-    %form.form-horizontal
+    %form.form-horizontal(ng-submit="editProfile()")
       .form-group
         %label(for="home-zip")
           Home Zip
