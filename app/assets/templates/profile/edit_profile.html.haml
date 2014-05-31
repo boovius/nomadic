@@ -1,0 +1,14 @@
+#edit_profile.container(ng-controller="EditProfileController")
+  .col-md-offset-3
+    %h3 Complete that profile, fool!
+    %form.form-horizontal
+      .form-group
+        %label(for="home-zip")
+          Home Zip
+        %input(ng-model="user.home_zip" type="text" placeholder="home zip" id="home-zip")
+      .form-group
+        %label(for="work-zip")
+          Work Zip
+        %input(ng-model="user.work_zip" type="text" placeholder="work zip" id="work-zip")
+      %button.btn.btn-submit(type="submit")
+        Submit

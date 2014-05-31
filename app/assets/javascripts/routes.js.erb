@@ -7,6 +7,9 @@ Nomadic.config(['$routeProvider', '$locationProvider', function($routeProvider, 
   .when('/', {
     templateUrl: '<%= asset_path('home/home.html') %>'
   })
+  .when('/edit_profile', {
+    templateUrl: '<%= asset_path('profile/edit_profile.html') %>'
+  })
   .otherwise({
     resolve: {
       login: ['Auth', '$window', function(Auth, $window) {
