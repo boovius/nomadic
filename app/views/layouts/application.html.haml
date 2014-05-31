@@ -10,15 +10,18 @@
       %a.navbar-brand(href="/")
         Nomadic
       %ul.nav.navbar-nav.navbar-right
-        %li.dropdown
+        %li.dropdown.new
           -if current_user.present?
             %a.dropdown-toggle(href="#" data-toggle="dropdown")
-              #{current_user.name}'s profile
+              %img(src="#{current_user.img}")
             %ul.dropdown-menu
               %li
-                %a(href="/widgets/new")Create Story!
+                %a(href="#")#{current_user.name}'s Profile
               %li
-                %a#sign-out(href="/widgets/new")Create Story!
+                %a(href="#")Create Story!
+              %li.divider
+              %li
+                %a#sign-out(href="/widgets/new")Sign Out
           - else
             %a#sign-in.dropdown-toggle(href="/auth/facebook" data-toggle="dropdown")
               Log In!
