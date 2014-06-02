@@ -1,12 +1,11 @@
 module Api
   class UsersController < ApplicationController
     def update
-      binding.pry
       user = User.find(params[:id])
       if user.update_attributes!(user_params)
-        flash[:message] = "success!!"
+        render json: user
       else
-        flash[:error] = "error"
+        render json: {error: "there was a problem"}, status: 422
       end
     end
 
