@@ -1,5 +1,6 @@
 Nomadic.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
 //= depend_on_asset 'home/home.html'
+//= depend_on_asset 'profile/edit_profile.html'
 
   $locationProvider.html5Mode(true)
 
@@ -12,7 +13,7 @@ Nomadic.config(['$routeProvider', '$locationProvider', function($routeProvider, 
   })
   .otherwise({
     resolve: {
-      login: ['Auth', '$window', function(Auth, $window) {
+      login: ['$window', function($window) {
         $window.location.href = '/'
       }]
     }
