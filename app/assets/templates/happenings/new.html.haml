@@ -1,0 +1,13 @@
+#new-happenings.container(ng-controller="")
+  .col-md-offset-3
+    %h3 What's Happening?
+    %form.form-horizontal(name="editProfileForm" role="form" ng-model="happening" ng-submit="createHappening()")
+      .form-group
+        %label(for="title")
+          What
+        %input(name="title" ng-model="happening.title" type="text" placeholder="party at big moma's house" id="title")
+      .form-group
+        %label(for="description")
+          Why
+        %textarea(name="description" ng-model="happening.description" type="text" placeholder="It gonna be the bomb yo!" id="description")
+      %input.btn.btn-submit(type="submit" value="create happening")

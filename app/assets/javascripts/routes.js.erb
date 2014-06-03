@@ -1,6 +1,7 @@
 Nomadic.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
 //= depend_on_asset 'home/home.html'
 //= depend_on_asset 'profile/edit_profile.html'
+//= depend_on_asset 'happenings/new.html'
 
   $locationProvider.html5Mode(true)
 
@@ -10,6 +11,9 @@ Nomadic.config(['$routeProvider', '$locationProvider', function($routeProvider, 
   })
   .when('/edit_profile', {
     templateUrl: '<%= asset_path('profile/edit_profile.html') %>'
+  })
+  .when('/happenings/new', {
+    templateUrl: '<%= asset_path('happenings/new.html') %>'
   })
   .otherwise({
     resolve: {
