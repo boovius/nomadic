@@ -1,5 +1,5 @@
 Nomadic.factory('HappeningService', ['$resource', function($resource) {
   return {
-    happenings: $resource('/api/happening/')
+    happenings: $resource('/api/happenings/')
   }
 }])
