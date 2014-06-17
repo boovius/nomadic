@@ -1,6 +1,7 @@
 class User < ActiveRecord::Base
 
-  belongs_to :tribe
+  belongs_to                :tribe
+  has_and_belongs_to_many   :happenings
 
   def name
     "#{first_name} #{last_name}"
