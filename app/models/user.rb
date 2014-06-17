@@ -1,5 +1,7 @@
 class User < ActiveRecord::Base
 
+  belongs_to :tribe
+
   def name
     "#{first_name} #{last_name}"
   end
