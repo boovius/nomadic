@@ -1,5 +1,4 @@
 class User < ActiveRecord::Base
-
   belongs_to :tribe
 
   def name
