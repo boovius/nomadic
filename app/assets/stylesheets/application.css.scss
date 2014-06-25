@@ -7,13 +7,16 @@
 @import 'compass/utilities/general';
 @import 'compass/typography/text/ellipsis';
 
-// All your variables
-@import 'custom_variables';
-
 // Bootstrap
 @import 'vendor/bootstrap-variables';
 @import 'vendor/bootstrap-custom';
 // @import 'bootstrap-responsive';  /*Part of the bootstrap gem*/ // not working
+
+// Leaflet
+@import 'vendor/leaflet';
+
+// All your variables
+@import 'custom_variables';
 
 // Partials
 @import 'partials/layout';
