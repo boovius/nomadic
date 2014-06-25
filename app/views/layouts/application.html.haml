@@ -5,7 +5,6 @@
     = include_gon
     = csrf_meta_tags
     = stylesheet_link_tag "application"
-    = stylesheet_link_tag "http://cdn.leafletjs.com/leaflet-0.7.1/leaflet.css"
   %body(ng-app="Nomadic")
     %nav.nav.navbar.navbar-inverse.navbar-fixed-top(ng-controller="NavController")
       %a.navbar-brand(href="/")
@@ -19,7 +18,7 @@
               %li
                 %a(href="#")#{current_user.name}'s Profile
               %li
-                %a(href="#")Create Story!
+                %a(href="happenings/create")What's Happening!
               %li.divider
               %li
                 %a#sign-out(href="/signout")Sign Out
@@ -28,6 +27,4 @@
               Log In!
     = yield
     #footer
-    = javascript_include_tag "http://cdn.leafletjs.com/leaflet-0.7.1/leaflet.js"
-    = javascript_include_tag "/bower_components/angular-leaflet/dist/angular-leaflet-directive.min.js"
     = javascript_include_tag "application"

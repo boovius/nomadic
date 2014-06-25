@@ -3,10 +3,13 @@
 //= require angular-route
 //= require_self
 //= require_tree ./controllers
+//= require_tree ./directives
+//= require_tree ./services
 
 Nomadic = angular.module('Nomadic', [
   'ngRoute',
-  'ngResource'
+  'ngResource',
+  'leaflet-directive'
 ])
 
 .config(['$httpProvider', '$routeProvider', '$locationProvider', function($httpProvider, $routeProvider, $locationProvider) {
