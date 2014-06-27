@@ -1,9 +1,7 @@
-<script type="text/javascript" src="http://maps.stamen.com/js/tile.stamen.js?v1.2.3"></script>
-
 #home.container
   %h2 Find your tribe.
   %p= 'Join friends from your neighborhood and work commute area.'
   #map.container(ng-controller="MapController")
     %h3 Check out where the current tribes are:
-    %leaflet(defaults="defaults" center="center" height="480px" width="640px")
+    %leaflet(defaults="defaults" center="center" layers="layers" height="480px" width="640px")
     %p= 'Made with Leaflet, Stamen Design & geoJSON'
