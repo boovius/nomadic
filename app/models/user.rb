@@ -2,7 +2,7 @@ class User < ActiveRecord::Base
 
   belongs_to  :tribe
   has_many    :happenings
-  has_many    :rspvs
+  has_many    :rsvps
 
   def name
     "#{first_name} #{last_name}"
