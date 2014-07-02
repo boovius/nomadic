@@ -1,31 +1,12 @@
 Nomadic.controller("MapController", [ '$scope', function($scope) {
-
-  $scope.latitude;
-  $scope.longitude;
-
-  if (navigator.geolocation){
-    navigator.geolocation.getCurrentPosition(setLatLong)
-  }
-  else {
-    alert("Geolcation not supported")
-  }
-
-  function setLatLong(position){
-    $scope.latitude = position.coords.latitude
-    $scope.longitude = position.coords.longitude
-
-    console.log ($scope.latitude)
-    console.log ($scope.longitude)
-
-    angular.extend($scope, {
-      center: {
-        lat: $scope.latitude,
-        lng: $scope.longitude,
-        zoom: 4
-      },
-      defaults: {
-          scrollWheelZoom: false
-      }
-    });
-  }
+  angular.extend($scope, {
+    center: {
+      lat: 34.004484,
+      lng: -118.4796064,
+      zoom: 11
+    },
+    defaults: {
+        scrollWheelZoom: false
+    }
+  })
 }]);
