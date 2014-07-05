@@ -1,8 +1,12 @@
-Nomadic.controller("MapController", [ '$scope', function($scope) {
+Nomadic.controller("MapController", ['$scope', 'GeolocationService', function($scope, GeolocationService) {
+
+  $scope.latitude  = GeolocationService.currentPosition.latitude
+  $scope.longitude = GeolocationService.currentPosition.longitude
+
   angular.extend($scope, {
     center: {
-      lat: 34.004484,
-      lng: -118.4796064,
+      lat: $scope.latitude,
+      lng: $scope.longitude,
       zoom: 11
     },
     defaults: {
