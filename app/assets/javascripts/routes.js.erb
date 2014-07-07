@@ -7,7 +7,22 @@ Nomadic.config(['$routeProvider', '$locationProvider', function($routeProvider, 
 
   $routeProvider
   .when('/', {
-    templateUrl: '<%= asset_path('home/home.html') %>'
+    templateUrl: '<%= asset_path('home/home.html') %>',
+    resolve: {
+      currentPosition: ['$q', 'GeolocationService', function($q, GeolocationService){
+        var q = $q.defer()
+        navigator.geolocation.getCurrentPosition(function(position){
+          latLong = { 'latitude' : position.coords.latitude, 'longitude' : position.coords.longitude }
+          GeolocationService.currentPosition = latLong
+          q.resolve(latLong)
+        }, function(error){
+          latLong = null
+          q.reject('Failed to get lat long')
+        })
+
+        return q.promise
+      }]
+    }
   })
   .when('/edit_profile', {
     templateUrl: '<%= asset_path('profile/edit_profile.html') %>'
