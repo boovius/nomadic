@@ -1,13 +1,36 @@
 #create-happening.container(ng-controller="HappeningCreateController")
   .col-md-offset-3
-    %h3 What's Happening?
-    %form.form-horizontal(name="editProfileForm" role="form" ng-model="happening" ng-submit="createHappening()")
-      .form-group
-        %label(for="title")
-          What
-        %input(name="title" ng-model="happening.title" type="text" placeholder="party at big moma's house" id="title")
-      .form-group
-        %label(for="description")
-          Why
-        %textarea(name="description" ng-model="happening.description" type="text" placeholder="It gonna be the bomb yo!" id="description")
-      %input.btn.btn-submit(type="submit" value="create happening")
+    %em Is this a
+    %btn-group
+      %button.btn.btn-default(type='button' ng-click='showRoving()')Roving
+      %span or
+      %button.btn.btn-default(type='button' ng-click='showStationary()')Stationary
+      %span Happening ?
+    #stationary-happening-input.container(ng-if='stationary')
+      %h3 Stationary Event
+      %form.form-horizontal(name="editProfileForm" role="form" ng-model="happening" ng-submit="createHappening()")
+        .form-group
+          %label(for="title")
+            What
+          %input(name="title" ng-model="happening.title" type="text" placeholder="party at big moma's house" id="title")
+        .form-group
+          %label(for="description")
+            Why
+          %textarea(name="description" ng-model="happening.description" type="text" placeholder="It gonna be the bomb yo!" id="description")
+        %input.btn.btn-submit(type="submit" value="create happening")
+    #roving-happening-input.container(ng-if="roving")
+      %h3 Roving Event
+      %form.form-horizontal(name="editProfileForm" role="form" ng-model="happening" ng-submit="createHappening()")
+        .form-group
+          %label(for="theme")
+            Area of Focus
+          %input(name="theme" ng-model="happening.theme" type="text" placeholder="basketball, politics, etc." id="theme")
+        .form-group
+          %label(for="description")
+            Where
+          %input(name="where" ng-model="happening.where" type="text" placeholder="123 Good St." id="where")
+        .form-group
+          %label(for="description")
+            When
+          %input(name="when" ng-model="happening.when" type="text" placeholder="7:00 PM" id="when")
+        %input.btn.btn-submit(type="submit" value="create happening")
