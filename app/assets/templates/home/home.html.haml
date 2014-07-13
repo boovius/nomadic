@@ -5,5 +5,5 @@
   %p= 'Join friends from your neighborhood and work commute area.'
   #map.container(ng-controller="MapController")
     %h3 Check out where the current tribes are:
-    %leaflet(defaults="defaults" center="center" geojson="geojson" height="480px" width="640px")
+    %leaflet(defaults="defaults" center="center" layers="layers" geojson="geojson" height="480px" width="640px")
     %p= 'Made with Angular-Leaflet, Stamen Design & GeoJSON'
