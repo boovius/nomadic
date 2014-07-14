@@ -1,3 +1,28 @@
+#create-happening {
+  text-align: center;
+
+  .sidebar {
+    font-size: 4px;
+    width: 40em;
+    float: left;
+  }
+
+  .btn-default {
+    height: 35%;
+    width: 80%;
+    margin-bottom: .3em;
+    font-size: 3em;
+    font-family: fantasy;
+  }
+
+  .btn-roving {
+    background-color: #dbd895;
+  }
+  .btn-stationary {
+    background-color: #db9470;
+  }
+}
+
 #stationary-happening-input {
   textarea {
     vertical-align: bottom;
