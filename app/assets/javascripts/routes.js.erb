@@ -1,7 +1,8 @@
 Nomadic.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
 //= depend_on_asset 'home/home.html'
 //= depend_on_asset 'profile/edit_profile.html'
-//= depend_on_asset 'happenings/new.html'
+//= depend_on_asset 'happenings/create.html'
+//= depend_on_asset 'happenings/view.html'
 
   $locationProvider.html5Mode(true)
 
@@ -26,6 +27,9 @@ Nomadic.config(['$routeProvider', '$locationProvider', function($routeProvider, 
   })
   .when('/edit_profile', {
     templateUrl: '<%= asset_path('profile/edit_profile.html') %>'
+  })
+  .when('/happenings', {
+    templateUrl: '<%= asset_path('happenings/view.html') %>'
   })
   .when('/happenings/create', {
     templateUrl: '<%= asset_path('happenings/create.html') %>'
